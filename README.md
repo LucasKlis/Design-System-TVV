@@ -28,3 +28,9 @@ npm run dev
 npm run build
 ```
 # Design-System-TVV
+
+Potrzebne odpowiedzi:
+
+- kto będzie używał tego design systemu?
+- czy system design to najlpesze rozwiązanie?
+- jakie korzyści chcemy uzyskać dzięki system designowi?
