@@ -8,6 +8,37 @@
   </head>
   <body>
     <div id="app"></div>
+    <div id="form-component">
+      <h1>Form component</h1>
+      <br />
+      <h2>{{header.toLocaleUpperCase() || 'Welcome'}}</h2>
+      <input v-model.lazy="newData" type="text" placeholder="Add an data">
+      <label> <input type="radio" v-model="newDataPriority" value="high">High</label>
+      <label> <input type="radio" v-model="newDataPriority" value="low">Low</label>
+      <br>
+      {{newData}} {{newDataPriority}}
+      <ul>
+        <li v-for="item in items" :key="item.id"> {{item.label}}</li>
+      </ul>
+    </div>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
+<script src="https://unpkg.com/vue@3"></script>
+<script>
+  const formComponent = Vue.createApp({
+      data() {
+        return{
+          header: "Let's stay in touch!",
+          newData: '',
+          newDataPriority: "low",
+          items: [
+          {id:1, label: "Name",},
+          {id:2, label:"Surname",},
+          {id:3, label:"Adress"}
+         ]
+        }
+      }
+    })
+  .mount('#form-component')
+</script>
