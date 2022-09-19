@@ -10,7 +10,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped> 
 button {
   padding: 0.75rem 1.5rem;
   font-family: inherit;
